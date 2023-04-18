@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="containers">
+      <div class="col-md-auto">
+        <div class="col-2">
+          <ul>
+            <li *ngFor="let item of branchs">
+              <a mat-button (click)="getValue(item.branch)">{{
+                item.branch
+              }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col cards" *ngIf="flag">
+        <div class="card card1" *ngFor="let item of branchs">
+          <div class="card-body">
+            <div class="card-text">
+              <h3>
+                <a (click)="getValue(item.branch)">{{ item.branch }}</a>
+              </h3>
+              <h6>haqqinda melumat</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col ml-5" *ngIf="!flag">
+        <div class="items card p-5">
+          <h1>{{ calledData }}</h1>
+          <div class="card-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ea
+              non incidunt in! Nostrum itaque fuga saepe perspiciatis aliquid
+              tenetur consectetur. Corrupti eveniet rem at ducimus nihil,
+              consequatur iusto quas.
+            </p>
+          </div>
+        </div>
+        <div class="doctors card p-5 w-75 mb-5">
+          <h1>Hekimlerimiz</h1>
+
+          <div class="card" *ngFor="let doctor of doctorsList">
+            <div class="card-img">
+              <img
+                style="width: 100px; height: 100px"
+                src="{{ doctor.photo.url }}"
+                alt=""
+              />
+            </div>
+            <div class="card-text">
+              <h3>
+                {{ doctor.name }}
+              </h3>
+              <h5>dr. {{ doctor.branch }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

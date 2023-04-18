@@ -1,0 +1,89 @@
+@import 'ngx-toastr/toastr';
+
+.aboutUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .aboutUser table {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 1000px;
+    margin: 50px;
+  }
+  .table table {
+    width: 600px;
+    background-color: rgb(209, 200, 200);
+  }
+  .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+    padding: 20px;
+    border: 0px solid black;
+  }
+  tr{
+    border: 0px solid black;
+  }
+  td{
+    width: 100px; 
+    border-radius: 1px solid black
+  }
+  th{
+   width: 100px; 
+   border-radius: 1px solid black
+
+  }
+  .queue .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+    padding: 20px;
+    border: 0px solid black;
+  }
+@media (max--width:390px) {
+  @import 'ngx-toastr/toastr';
+
+.aboutUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .aboutUser table {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 390px;
+   // margin: 50px;
+  }
+  .table table {
+    width: 390px;
+    background-color: rgb(209, 200, 200);
+  }
+  .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+   // padding: 20px;
+    border: 0px solid black;
+  }
+  tr{
+    border: 0px solid black;
+  }
+  td{
+    width: 100px; 
+    border-radius: 1px solid black
+  }
+  th{
+   width: 100px; 
+   border-radius: 1px solid black
+
+  }
+  .queue .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+   // padding: 20px;
+    border: 0px solid black;
+  }
+
+}

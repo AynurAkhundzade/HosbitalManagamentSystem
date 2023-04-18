@@ -1,0 +1,22 @@
+body {
+  // background-color: #9ec9e6;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+///////////////////Main////////////////////////////////
+.queueButton {
+  width: 200px;
+}
+
+.queueButton :hover {
+  width: 400px;
+  color: blue;
+}
+@media (max-width:500px) {
+  .queueButton :hover {
+    width: 300px;
+    color: blue;
+  }
+}

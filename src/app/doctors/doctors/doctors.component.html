@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="part1 content d-flex m-3">
+        <div class="card-content d-flex p-2 w-50">
+          <div class="text">
+
+            <h1>Dr.{{ doctorinfo.name }} {{ doctorinfo.surname }}</h1>
+            <h3>{{ doctorinfo.branch }}</h3>
+            <h3>Fəaliyyət sahəsi: {{ doctorinfo.department.departmentName }}</h3>
+            <p class="w-50 p-1">
+              {{ doctorinfo.aboutDoctor }}
+            </p>
+            <div class="queueButton">
+              <button mat-raised-button  (click)="routeToQueue()">
+                Novbe Gotur
+              </button>
+            </div>
+          </div>
+        </div>
+        <img class="w-50 h-50 ml-3" src="{{ doctorinfo.photo.url }}" alt="" />
+      </div>
+    </main>
+    <!-- <footer>
+      <div class="lastPart">
+        <h3>elaqe</h3>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="phoneIcon"></fa-icon>
+          <p>0555555555</p>
+        </div>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="emailIcon"></fa-icon>
+          <p>askerli@gmail.com</p>
+        </div>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="locationIcon"></fa-icon>
+          <p>Azerbaycan, Baki, K.Kazimzade kuc</p>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>

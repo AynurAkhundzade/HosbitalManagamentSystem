@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Document</title> 
+    <script 
+      src="https://kit.fontawesome.com/7b501a9f67.js" 
+      crossorigin="anonymous" 
+    ></script> 
+  </head> 
+  <body> 
+    <main> 
+      <div class="part1"> 
+        <div class="text"> 
+          <h2>Güc və xoşbəxtliyin təməli Sağlamlıqdır</h2> 
+          <h2>Sağlamlığınıza laqeyid yanaşmayın</h2> 
+          <button class="btn" (click)="openQueue()">Online Novbe</button> 
+        </div> 
+ 
+        <div class="img"> 
+          <img 
+            src="https://shekimedia.az/wp-content/uploads/2022/10/hekim-medical-xestexana-sigorta-icbari.jpg" 
+            alt="" 
+          /> 
+        </div> 
+      </div> 
+      <div class="part2"> 
+        <!-- <div class="video"> 
+          <video 
+            src="/Angular/HosbitalManagementSystem/src/app/hosbital-page/esas.webm" 
+            width="320" 
+            height="240" 
+            autoplay 
+          ></video> 
+        </div> --> 
+        <div class="content contents"> 
+          <h1 class="h1">XİDMƏTLƏRİMİZ</h1> 
+          <div class="cardss"> 
+            <div class="card"> 
+              <div class="card-img"> 
+                <img 
+                  style="width: 100%" 
+                  src="https://customshospital.az/mt-content/uploads/2019/01/poliklinika.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">Poliklinik muayine</div> 
+                <div class="card-text" style="width: 70%"> 
+                  Hospitalda işləyən peşəkar həkimlərin - terapevt, pediatr, 
+                  ginekoloq, cərrah, oftalmoloq, kardioloq, nefroloq, 
+                  travmatoloq, LOR, stomatoloq və digərlərinin ambulator 
+                  qəbuluna yazıla bilərsiniz. 
+                </div> 
+              </div> 
+            </div> 
+            <div class="card"> 
+              <div class="card-img"> 
+                <img 
+                  style="width: 100%" 
+                  src="https://customshospital.az/mt-content/uploads/2019/01/diaqnostika.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">Diaqnostika</div> 
+                <div class="card-text" style="width: 100%"> 
+                  Hospitalımızda ən müasir diaqnostik avadanlıqlardan istifadə 
+                  edilməklə, ultrasəs müayinələri, periferik limfa düyünlərinin 
+                  ultrasəs müayinəsi, bazu oynağının ultrasəs müayinəsi, rəngli 
+                  doppler kimi müayinələr peşəkar həkimlərimiz tərəfindən həyata 
+                  keçirilir. 
+                </div> 
+              </div> 
+            </div> 
+            <div class="card"> 
+              <div class="card-img p-3"> 
+                <img 
+                  style="width: 100%" 
+                  src="https://customshospital.az/mt-content/uploads/2018/10/tecili_yardim.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">TECILI YARDIM</div> 
+                <div class="card-text" style="width: 100%"> 
+                  Xaricdə uzunmüddətli ixtisaslaşma keçmiş və zəngin iş 
+                  təcrübəsi qazanmış Təcili Tibbi Yardım şöbəsinin həkim heyəti 
+                  xəstələrə, keyfiyyətli və zamanında təcili tibbi yardım 
+                  göstərir, ehtiyac olarsa hospitala daşınmasını təmin edir, 
+                  monitorinq və reanimasiya tədbirlərini keyfiyyətlə həyata 
+                  keçirir. 
+                </div> 
+              </div> 
+            </div> 
+            <div class="card"> 
+              <div class="card-img"> 
+                <img 
+                  style="width: 100%"
+                  src="https://customshospital.az/mt-content/uploads/2018/11/stasionar.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">Stasionar</div> 
+                <div class="card-text" style="width: 70%"> 
+                  Pasiyentlərin stasionarda rahatlığı və effektiv müalicəsi üçün 
+                  komfortlu standart və VİP palatalar mövcuddur. Xəstələrin 
+                  yaxınlarının qalması üçün tam şərait yaradılıb. 
+                </div> 
+              </div> 
+            </div> 
+            <div class="card"> 
+              <div class="card-img"> 
+                <img 
+                  style="width: 100%" 
+                  src="https://customshospital.az/mt-content/uploads/2019/11/peyvnd2.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">Peyvendler</div> 
+                <div class="card-text" style="width: 100%"> 
+                  Vaxtında edilmiş peyvəndlər Sizi və övladlarınızı ən ciddi 
+                  xəstəliklərdən və onların təhlükəli fəsadlarından qorumuş 
+                  olur. Son yüzillikdə bir çox xəstəliklərin zərərini məhz 
+                  vaksinlər vasitəsilə azaltmaq mümkün olmuşdur. 
+                </div> 
+              </div> 
+            </div> 
+            <div class="card"> 
+              <div class="card-img"> 
+                <img 
+                  style="width: 100%" 
+                  src="https://customshospital.az/mt-content/uploads/2018/10/fizio.jpg" 
+                  alt="" 
+                /> 
+              </div> 
+              <div class="card-body"> 
+                <div class="card-title">Fizioterapiya</div> 
+                <div class="card-text" style="width: 100%"> 
+                  Ən son avadanlıqlarla təchiz olunmuş Fizioterapiya şöbəsində 
+                  çalışan mütəxəssislər dünyanın bir sıra aparıcı ölkələrində 
+                  tibbi təhsil almış və uzunmüddətli ixtisas artırma kurslarında 
+                  bilik və bacarıqlarını təkmilləşdirmişdirlər. 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="part3"> 
+        <h3>Lütfən, Rəyinizi əlave edin</h3> 
+        <form action=""> 
+          <mat-form-field> 
+            <input type="text" matInput placeholder="email" /> 
+          </mat-form-field> 
+          <mat-form-field> 
+            <input type="text" matInput placeholder="ad" /> 
+          </mat-form-field> 
+          <mat-form-field> 
+            <textarea 
+              name="" 
+              id="" 
+              matInput 
+              placeholder="rəyiniz" 
+              cols="10" 
+              rows="10" 
+            ></textarea> 
+          </mat-form-field> 
+          <button class="btn btn-primary">Rəy göndərmək</button> 
+        </form> 
+      </div> 
+    </main> 
+    <!-- <footer> 
+      <div class="lastPart"> 
+        <h3>elaqe</h3> 
+        <div class="miniParts d-flex"> 
+          <fa-icon [icon]="phoneIcon"></fa-icon> 
+          <p>0555555555</p> 
+        </div> 
+        <div class="miniParts d-flex"> 
+          <fa-icon [icon]="emailIcon"></fa-icon> 
+          <p>askerli@gmail.com</p> 
+        </div> 
+        <div class="miniParts d-flex"> 
+          <fa-icon [icon]="locationIcon"></fa-icon> 
+          <p>Azerbaycan, Baki, K.Kazimzade kuc</p> 
+        </div> 
+      </div> 
+    </footer> --> 
+  </body> 
+</html>

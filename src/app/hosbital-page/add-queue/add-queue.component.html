@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="d-flex flex-column"
+      style="color: blue; text-align: center; margin-bottom: 10px"
+    >
+      <h1>Online növbəyə xoş gəlmisiniz</h1>
+      <br />
+      <h3>
+        Online növbə haqqında məlumatlarınızı <br />
+        görmək istəyirsinizsə,
+        <br />
+        Qeydiyyatdan keçin
+      </h3>
+      <div class="registerButton">
+        <a class="registerBtn" mat-raised-button (click)="goToRegister()"
+          >Qeydiyyat</a
+        >
+      </div>
+    </div>
+    <form [formGroup]="queueForm">
+      <div class="d-flex flex-column">
+        <div class="form d-flex flex-column g-3">
+          <div class="form1">
+            <mat-form-field appearance="fill" class="d-flex m-2">
+              <mat-label>Adinizi yazin</mat-label>
+              <input formControlName="name" matInput />
+            </mat-form-field>
+            <mat-form-field class="d-flex m-2">
+              <mat-label>Soyadinizi yazin</mat-label>
+              <input formControlName="surName" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="d-flex m-2">
+              <mat-label>emailinizi yazin</mat-label>
+              <input formControlName="email" type="email" matInput />
+            </mat-form-field>
+          </div>
+          <div class="form2">
+            <mat-form-field appearance="fill" class="d-flex m-2">
+              <mat-label>mobil nomrenizi yazin</mat-label>
+              <input formControlName="phone" matInput />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="d-flex m-2">
+              <mat-label>Hekim secin</mat-label>
+              <mat-select formControlName="doctor">
+                <mat-option *ngFor="let item of data" value="{{ item.finCode }}"
+                  >Dr.{{ item.name }} {{ item.surname }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <mat-card class="demo-inline-calendar-card">
+          <mat-calendar [(selected)]="selected"></mat-calendar>
+        </mat-card>
+
+        <div class="w-100 m-5">
+          <button
+            mat-raised-button
+            color="primary"
+            *ngIf="!hour"
+            (click)="choseHour()"
+          >
+            Saati sec
+          </button>
+        </div>
+
+        <div class="part-2" *ngIf="hour">
+          <mat-card class="w-75 mt-3" style="background-color: whitesmoke">
+            <mat-label class="p-1">Saati secin</mat-label>
+            <mat-select formControlName="time" [(value)]="time">
+              <mat-option *ngFor="let hour of chosenHours" value="{{ hour }}">{{
+                hour
+              }}</mat-option>
+            </mat-select>
+          </mat-card>
+
+          <p>Selected date: {{ selected }}</p>
+          <p>Selected time:{{ time }}</p>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Daha once mualice almisinizmi?</mat-label>
+          <input formControlName="pastTreatment" matInput />
+        </mat-form-field>
+
+        <mat-card>
+          <mat-card-content>
+            <div class="radioButtons">
+            <label for="">Sigortaniz varmi?</label>
+            <mat-radio-group
+              class="example-radio-group"
+              aria-labelledby="example-radio-group-label"
+            >
+              <mat-radio-button
+                [value]="true"
+                (click)="yesSubmit()"
+                class="example-radio-button"
+                >Beli</mat-radio-button
+              >
+              <mat-radio-button
+                [value]="false"
+                (click)="noSubmit()"
+                class="example-radio-button"
+              >
+                Xeyr</mat-radio-button
+              >
+            </mat-radio-group>
+          </div>
+          </mat-card-content>
+        </mat-card>
+
+        <div class="d-flex flex-column g-3 w-75 m-5" *ngIf="flag">
+          <mat-form-field>
+            <mat-label>Finkodunuzu daxil edin</mat-label>
+            <input formControlName="customFinCode" matInput />
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="addQueue()">
+            Online novbe Gotur
+          </button>
+        </div>
+
+        <div class="w-100 m-5">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="addQueue()"
+            *ngIf="!flag"
+          >
+            online odemeye kecid
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

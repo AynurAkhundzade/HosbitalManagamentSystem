@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="aboutUser">
+      <h1>Səhifənizə xoş gəlmisiniz</h1>
+<h3>Asistants</h3>
+<div class="table">
+<table>
+  <thead>
+    <tr>
+      <th >Id</th>
+    <th>FinCode</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>cardId</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let item of datas">
+    <td>{{item.id}}.</td>
+    <td>{{item.finCode}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.surname}}</td>
+    <td>{{item.cardId}}</td>
+
+  </tr>
+</tbody>
+</table>
+    </div>
+    <div class="queue">
+      <h1>MÜAYİNƏ</h1>
+      <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <td>Doctor ad</td>
+            <td>Doctor Soyad</td>
+            <th>Xəstə ad</th>
+          <th>Xəstə soyad</th>
+          <th>keçmiş mualicə</th>
+          <th>tarix</th>
+          <th>saat</th>
+        </tr>
+        </thead>
+      <tbody>
+        <tr *ngFor="let item of queueData">
+         <td>{{item.doctorName}}</td>
+         <td>{{item.doctorSurname}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.surname}}</td>
+          <td>{{item.pastTreatment}}</td>
+          <td>{{item.localDate[0]}}/{{item.localDate[1]}}/{{item.localDate[2]}}</td>
+          <td>{{item.time}}</td>
+      
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  </body>
+</html>

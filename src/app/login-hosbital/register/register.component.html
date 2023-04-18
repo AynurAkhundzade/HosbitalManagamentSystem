@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="head">
+      <div class="hBtnDiv">
+        <button class="hBtn" (click)="passDaxil()">
+          <a routerLink="/daxil">Daxil Ol</a>
+        </button>
+      </div>
+      <div class="hBtnDiv">
+        <button class="hBtn" (click)="passQeydiyyat()">
+          <a routerLink="/reg">Qeydiyyat</a>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="login">
+        <div class="text">
+          Qeydiyyatdan keçmək üçün <br />
+          özünüz haqda düzgün məlumat verin
+        </div>
+        <div class="form">
+          <form [formGroup]="regForm">
+            <div class="formDiv">
+              <div class="inpDiv">
+                <input
+                  type="text"
+                  formControlName="name"
+                  placeholder="Adınızı daxil edin"
+                />
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="!regForm.get('name')?.valid && submit"
+              >
+                Adınızı daxil edin
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="text"
+                  formControlName="surname"
+                  placeholder="Soyadınızı daxil edin"
+                />
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="!regForm.get('surname')?.valid && submit"
+              >
+                Soyadınızı daxil edin
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="text"
+                  formControlName="email"
+                  placeholder="Elektron Poçtunuzu daxil edin"
+                />
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="!regForm.get('email')?.valid && submit"
+              >
+                Elektron poçt ünvanınızı daxil edin
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="password"
+                  formControlName="password"
+                  placeholder="Şifrə daxil edin"
+                />
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="!regForm.get('password')?.valid && submit"
+              >
+                Şifrə daxil edin
+              </div>
+
+              <div class="formBtn">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="onClick()"
+                  class="hbtn1"
+                >
+                  Qeydiyyat
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

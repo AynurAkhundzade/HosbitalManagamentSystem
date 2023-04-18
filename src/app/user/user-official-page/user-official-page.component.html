@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="user">
+      <div class="userInfo">
+        <h1>
+          ƏZİZ İSTİFADƏÇİ, <br />
+          xəstəxanamıza xoş gəlmisiniz.
+        </h1>
+        <h3>Online növbə haqqında məlumatlarınız</h3>
+        <div class="table">
+          <table *ngFor="let item of data">
+            <tbody>
+              <tr>
+                <td>Adınız :</td>
+                <td>{{item.name}}</td>
+              </tr>
+              <tr>
+                <td>Soyadınız :</td>
+                <td>{{item.surname}}</td>
+              </tr>
+              <tr>
+                <td>Həkiminizin adı :</td>
+                <td>{{item.doctorName}}</td>
+              </tr>
+              <tr>
+                <td>Həkimin soyadı :</td>
+                <td>{{item.doctorSurname}}</td>
+              </tr>
+              <tr>
+                <td>Növbənin tarixi :</td>
+                <td>{{item.localDate}}</td>
+              </tr>
+              <tr>
+                <td>Növbənin saatı :</td>
+                <td>{{item.time}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

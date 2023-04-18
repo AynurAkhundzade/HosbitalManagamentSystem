@@ -1,0 +1,60 @@
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <a href="http://localhost:4200"></a>
+    </div>
+
+    <div class="elements">
+      <a href="" mat-button>Haqqımızda</a>
+      <a (click)="passBranch()" mat-button>Şöbələr</a>
+      <a (click)="passDoctor()" mat-button>Həkimlər</a>
+      <a href="#footer" mat-button>Əlaqə</a>
+      <a mat-raised-button (click)="passLogin()" color="primary">Login</a>
+
+      <!-- <button mat-raised-button color="primary" class="loginButton">ENG</button> -->
+    </div>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer id="footer" class="mb-0">
+  <div class="lastPart">
+    <h1 style="padding-top: 0; margin-top: 0; text-align: center">elaqe</h1>
+    <div class="divs ">
+      <div class="divs1">
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="phoneIcon"></fa-icon>
+          <p>0555555555</p>
+        </div>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="phoneIcon"></fa-icon>
+          <p>0556666666</p>
+        </div>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="phoneIcon"></fa-icon>
+          <p>(012) 3333333</p>
+        </div>
+      </div>
+      <div class="divs2">
+        <div class="miniParts d-flex">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="facebook"
+          ></mat-icon>
+          <p>https://www.facebook.com/</p>
+        </div>
+
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="locationIcon"></fa-icon>
+          <p>Azerbaycan, Baki, K.Kazimzade kuc</p>
+        </div>
+        <div class="miniParts d-flex">
+          <fa-icon [icon]="emailIcon"></fa-icon>
+          <p>askerli@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

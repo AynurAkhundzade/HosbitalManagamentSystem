@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="containers">
+      <div class="login">
+        <div class="text">
+          Online Novbe ucun xoş gəlmisiniz! <br />
+          Formu doldurduqdan sonra, <br />
+          Odenis elemek ucun xanalari doldurun
+        </div>
+        <div class="form">
+          <form [formGroup]="regForm">
+            <div class="formDiv">
+
+              <div class="inpDiv">
+                <input
+                  type="number"
+                  name="cartNum"
+                  formControlName="cartNum"
+                  placeholder="Kart Nomresi"
+                />
+              </div>
+              <div
+                class="errordiv"
+                *ngIf="
+                  !regForm.get('cartNum')?.valid &&
+                  regForm.get('cartNum')?.value == null &&
+                  submit
+                "
+              >
+                Kart Nomresi hissesi bos qalmamalidir
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="text"
+                  name="CVV"
+                  formControlName="CVV"
+                  placeholder="CVV"
+                />
+              </div>
+              <div
+                class="errordiv"
+                *ngIf="
+                  !regForm.get('CVV')?.valid &&
+                  regForm.get('CVV')?.value == null &&
+                  submit
+                "
+              >
+                CVV hissesi bos qalmamalidir
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="text"
+                  name="endTime"
+                  formControlName="endTime"
+                  placeholder="End Time"
+                />
+              </div>
+              <div
+                class="errordiv"
+                *ngIf="
+                  !regForm.get('endTime')?.valid &&
+                  regForm.get('endTime')?.value == null &&
+                  submit
+                "
+              >
+                End Time hissesi bos qalmamalidir
+              </div>
+              <div class="inpDiv">
+                <input
+                  type="number"
+                  name="amount"
+                  formControlName="amount"
+                  placeholder="Odenilecek Mebleg"
+                />
+              </div>
+              <div
+                class="errordiv"
+                *ngIf="
+                  !regForm.get('amount')?.valid &&
+                  regForm.get('amount')?.value == null &&
+                  submit
+                "
+              >
+                Mebleg hissesi bos qalmamalidir
+              </div>
+              <div class="formBtn">
+                <button type="button" (click)="routeToBack()" class="btn m-1">
+                  geri
+                </button>
+                <button type="button" (click)="validation()" class="btn m-1">
+                  Odemek
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

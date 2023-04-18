@@ -1,0 +1,24 @@
+// .table tr td {
+//   border-radius: 1px solid black !important;
+// }
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.userInfo table {
+  display: flex;
+  text-align: center;
+  width: 1000px;
+  margin: 50px;
+}
+.table table {
+  width: 600px;
+  background-color: rgb(209, 200, 200);
+}
+.table table tr td {
+  width: 300px;
+  height: 50px;
+  border: 0px solid black;
+}

@@ -1,0 +1,24 @@
+@import 'ngx-toastr/toastr';
+.aboutUser {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+}
+.bttn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 40px;
+  margin-left: 280px;
+  text-align: center;
+}
+.btn:hover {
+  width: 70%;
+  margin: 5px 0px;
+  background-color: rgb(165, 161, 161);
+}

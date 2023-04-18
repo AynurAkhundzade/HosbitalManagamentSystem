@@ -1,0 +1,37 @@
+@import 'ngx-toastr/toastr';
+
+body{
+    width: 100%;
+}
+
+.asistantPage{
+    margin: 30px;
+}
+.table table {
+    width: 600px;
+    background-color: rgb(209, 200, 200);
+  }
+  .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+    padding: 20px;
+    border: 0px solid black;
+  }
+  tr{
+    border: 0px solid black;
+  }
+  td{
+    width: 100px; 
+    border-radius: 1px solid black
+  }
+  th{
+   width: 100px; 
+   border-radius: 1px solid black
+
+  }
+  .queue .table table thead tbody tr th td {
+    //width: 500px;
+    height: 50px;
+    padding: 20px;
+    border: 0px solid black;
+  }
